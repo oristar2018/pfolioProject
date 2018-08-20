@@ -156,6 +156,163 @@
   width: 100vw;
 }
 
+#plain {
+  height: 50vh;
+}
+
+
+#content {
+  /*margin-top: 50vh;*/
+  width: 100vw;
+  height: 50vh;
+}
+
+#slideIn1 {
+  position: absolute;
+  opacity: 0;
+
+  
+}
+
+@keyframes slideIn {
+  0% {
+    left: -1000px;
+
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+#ProjectsContainer {
+  position: absolute;
+  top: 30vh;
+}
+
+#scene3 {
+  height: 80vh;
+  width: 100vw;
+  background: cyan;
+}
+
+#ProjectsLayer1 {
+  height: 80vh;
+  width: 100vw;
+
+}
+
+#ProjectsLayer2 {
+  height: 80vh;
+  width: 100vw;
+
+}
+
+
+.ProjectsLayerImage1 {
+  height: 50vh;
+  width: 50vw;
+}
+
+
+#ProjectsLayer4 {
+  height: 80vh;
+  width: 100vw;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ProjectLayerImage2 {
+  position: absolute;
+  height: 50vh;
+  width: 50vw;
+}
+
+#TeaMain, #Tea2 {
+  position: relative;
+  animation: 1s linear 1 forwards slideInImage;
+}
+
+@keyframes slideInImage {
+
+  0% {
+    left: -1000px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+#Tea3, #TeaMenu {
+  position: relative;
+  animation: 1s linear 1 forwards slideInImageBis;
+}
+
+
+@keyframes slideInImageBis {
+
+  0% {
+    right: -1000px;
+    opacity: 0;
+  }
+
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+.h1Projects  {
+
+  background: silver;
+}
+
+#plain2 {
+  height: 40vh;
+  width: 100vw;
+}
+
+#plain3 {
+  height: 40vh;
+  width: 100vw;
+}
+
+#scene4 {
+  height: 80vh;
+  width: 100vw;
+  background: cyan;
+  opacity: 0;
+}
+
+#scene4Layer1, #scene4image1 {
+  height: 80vh;
+  width: 100vw;
+  
+}
+
+#scene4Layer2 {
+  height: 80vh;
+  width: 100vw;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1
+  }
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
