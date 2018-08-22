@@ -1,3 +1,9 @@
+body{
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
 .App {
   text-align: center;
 }
@@ -12,6 +18,11 @@
   background: silver;
   height: 10vh;
   width: 100vw;
+  z-index: 2;
+}
+
+.scenes {
+  margin-bottom: 9.5vh
 }
 
 #NavLinkDiv {
@@ -160,6 +171,15 @@
   height: 50vh;
 }
 
+#scene2Layer2, #scene2 {
+  /*display: flex !important;
+  flex-direction: row;
+  flex-wrap: wrap;*/
+  height: 100vh !important;
+
+
+}
+
 
 #content {
   /*margin-top: 50vh;*/
@@ -187,23 +207,23 @@
 
 #ProjectsContainer {
   position: absolute;
-  top: 30vh;
+  top: 10vh;
 }
 
 #scene3 {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background: cyan;
 }
 
 #ProjectsLayer1 {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
 
 }
 
 #ProjectsLayer2 {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
 
 }
@@ -215,14 +235,19 @@
 }
 
 
-#ProjectsLayer4 {
-  height: 80vh;
+#ProjectsLayer4, #scene5Layer2, #scene6Layer2 {
+  height: 90vh;
   width: 100vw;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+ #scene5Layer2, #scene6Layer2 {
+  height: 90vh;
+  width: 100vw;
+ }
 
 .ProjectLayerImage2 {
   position: absolute;
@@ -233,6 +258,15 @@
 #TeaMain, #Tea2 {
   position: relative;
   animation: 1s linear 1 forwards slideInImage;
+}
+
+.ArrowClass {
+  height: 10vh;
+  width: 10vw;
+}
+
+#Arrow1 {
+  transform: rotate(90deg);
 }
 
 @keyframes slideInImage {
@@ -283,26 +317,28 @@
 }
 
 #scene4 {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background: cyan;
   opacity: 0;
 }
 
-#scene4Layer1, #scene4image1 {
-  height: 80vh;
+#scene4Layer1, #scene4image1, #scene5Layer1, #scene5image1,  #scene6Layer1, #scene6image1,{
+  height: 90vh;
   width: 100vw;
+
   
 }
 
-#scene4Layer2 {
-  height: 80vh;
+#scene4Layer2, #scene5Layer2, #scene6Layer2 {
+  height: 90vh;
   width: 100vw;
   display: flex !important;
   flex-direction: column;
   align-items: center;
   justify-content: center
 }
+
 
 @keyframes appear {
   0% {
@@ -317,3 +353,37 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+::-webkit-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: black;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: black;
+}
+

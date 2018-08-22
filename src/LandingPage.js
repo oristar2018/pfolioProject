@@ -8,14 +8,21 @@ class LandingPage extends Component {
     var parallaxInstance = new Parallax(scene, { 
     	relativeInput: true,
     	hoverOnly: true,
+      scalarX: 2.5,
+      scalarY: 5
 
     });
 
      var parallaxInstance2 = new Parallax(scene2, { 
     	relativeInput: true,
     	hoverOnly: true,
+       scalarX: 2.5,
+      scalarY: 5
+
 
     });
+
+     window.scrollTo(0, 0);
 
     var plain = document.getElementById('plain');
     var slideIn1 = document.getElementById('slideIn1');
@@ -34,18 +41,18 @@ class LandingPage extends Component {
 	
     return (
     	<div>
-    	<div id="scene">
-  <div data-depth="0.2" id="layer1" style={{background: "cyan"}}>background</div>
+    	<div id="scene" style={{background: "cyan", width: "130vw", overflowX: "hidden"}}>
+  <div data-depth="0.2" id="layer1" style={{background: "cyan", width: "130vw", overflowX: "hidden"}}></div>
   <div id="foreground" data-depth="0.6"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Dambreville Benoit</h1><h1 id="foreground3">...and i provide Solutions</h1></div>
 </div>
 <div className="Plain" id="plain"></div>
 <section id="content">
-<p id="slideIn1">I am a self taught full-stack Javascript developper specializing in React and NodeJs.</p>
+<p id="slideIn1">I am a self taught full-stack Javascript developper specializing in the MERN stack.</p>
 
 </section>
 
-<div id="scene2">
-  <div data-depth="0.1" id="layer1" style={{background: "cyan"}}>background</div>
+<div id="scene2" style={{background: "white"}} >
+  <div data-depth="0.1" id="layer1" style={{background: "cyan"}}></div>
   <div data-depth="0.4" id="scene2Layer2">
   <img src="mongodb2.png" className="techImages" id="mongodbLogo" alt="tech logo" />
   <img src="ReactLogo.png" className="techImages" id="reactLogo" alt="tech logo"/>
