@@ -96,18 +96,25 @@ var parallaxInstance4 = new Parallax(scene6, {
 		//var plain3 = document.getElementById('plain3');
         window.scrollTo(0, 0);
 		var scene4 = document.getElementById('scene4');
+		var Frame1 = document.getElementById('scene5image1');
+		var Frame2 = document.getElementById('scene6image1');
+		var FrameFront1 = document.getElementById('scene5Layer2');
+		var FrameFront2 = document.getElementById('scene6Layer2');
 
 
-		scene3.addEventListener('mouseover', (e) => {
-			scene4.style.animation = "1s linear 1 forwards appear"
+		scene3.addEventListener('mouseleave', (e) => {
+			
+			scene4.style.animation = "0.7s ease-in 1 forwards appear"
 		});
 
-		scene4.addEventListener('mouseover', (e) => {
-			scene5.style.animation = "1s linear 1 forwards appear"
+		scene4.addEventListener('mouseleave', (e) => {
+			
+			Frame1.style.animation = "0.7s ease-in 1 forwards appear1"
 		});
 
-		scene5.addEventListener('mouseover', (e) => {
-			scene6.style.animation = "1s linear 1 forwards appear"
+		FrameFront1.addEventListener('mouseleave', (e) => {
+			
+			Frame2.style.animation = "0.7s ease-in 1 forwards appear2"
 		});
 
 		/*var TeaMain = document.getElementById('TeaMain');
@@ -225,14 +232,14 @@ var buttonUpFrameStyle = {
 				</div>
 				</div>
                 <div className="scenes" id="scene5" ref={(div) => { this.Scene5 = div; }}>
-				<div id="scene5Layer1" data-depth="0.2">{/*<img id="scene5image1" src="SimonSays.png" alt="simon says" />*/}<iframe style={{ height: "100vh", width: "100vw"}} id="scene5image1" src="https://codepen.io/oristar2018/full/xJxqrx/" /></div>
+				<div id="scene5Layer1" data-depth="0.2">{/*<img id="scene5image1" src="SimonSays.png" alt="simon says" />*/}<iframe style={{ opacity: "0", height: "100vh", width: "100vw"}} id="scene5image1" src="https://codepen.io/oristar2018/full/xJxqrx/" /></div>
 				{/*<div id="scene5Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Rogue-Like Game</h1></a></div>*/}
                 <div onWheel={this.onScroll} id="scene5Layer2" data-depth="0.9">
                 <button onScroll={this.onScroll} style={buttonUpFrameStyle} onClick={() => scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
                 <button onScroll={this.onScroll} style={buttonDownFrameStyle} onClick={() => scrollToComponent(this.Scene6, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button></div>
                 </div>
 				<div className="scenes" id="scene6" ref={(div) => { this.Scene6 = div; }}>
-				<div id="scene6Layer1" data-depth="0.2" data-pointer-events="all">{/*<img id="scene6image1" src="RandomQuoteGenerator.png" alt="random quote" />*/}<iframe style={{  height: "100vh", width: "100vw"}} id="scene6image1" src="https://codepen.io/oristar2018/full/JZpEWr/" /></div>
+				<div id="scene6Layer1" data-depth="0.2" data-pointer-events="all">{/*<img id="scene6image1" src="RandomQuoteGenerator.png" alt="random quote" />*/}<iframe style={{ opacity: "0", height: "100vh", width: "100vw"}} id="scene6image1" src="https://codepen.io/oristar2018/full/JZpEWr/" /></div>
 				{/*<div id="scene6Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Rogue-Like Game</h1></a></div>*/}
                 <div onWheel={this.onScroll} id="scene6Layer2" data-depth="0.9">
                 <button onScroll={this.onScroll} style={buttonUpFrameStyle} onClick={() => scrollToComponent(this.Scene5, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
