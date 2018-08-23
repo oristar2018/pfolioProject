@@ -11,16 +11,28 @@ class Projects extends Component {
 
     onScroll(e) {
     	console.log(e);
+    	var Frame1 = document.getElementById('scene5image1');
+		var Frame2 = document.getElementById('scene6image1');
+		var FrameFront1 = document.getElementById('scene5Layer2');
+		var FrameFront2 = document.getElementById('scene6Layer2');
+		var scene3 = document.getElementById("scene3");
+		var scene4 = document.getElementById("scene4");
+		var scene5 = document.getElementById("scene5");
+		var scene6 = document.getElementById("scene6");
+
     	 if (e.deltaY > 0) {
     	switch(e.target.id) {
     	 case "ProjectsLayer4":
          scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'});
+         scene4.style.animation = "0.7s ease-in 1 forwards appear"
          break;
          case "scene4Layer2":
          scrollToComponent(this.Scene5, { offset: 0, align: 'center', duration: 500, ease:'inExpo'});
+         Frame1.style.animation = "0.7s ease-in 1 forwards appear1"
          break;
          case "scene5Layer2":
          	scrollToComponent(this.Scene6, { offset: 0, align: 'center', duration: 500, ease:'inExpo'});
+         	Frame2.style.animation = "0.7s ease-in 1 forwards appear2"
          	break;
          case "scene6Layer2":
          	scrollToComponent(this.Scene6, { offset: 0, align: 'center', duration: 500, ease:'inExpo'});
@@ -56,6 +68,7 @@ class Projects extends Component {
 		var scene4 = document.getElementById("scene4");
 		var scene5 = document.getElementById("scene5");
 		var scene6 = document.getElementById("scene6");
+
 		var parallaxInstance = new Parallax(scene3, {
 			relativeInput: true,
 			hoverOnly: true,
@@ -102,7 +115,7 @@ var parallaxInstance4 = new Parallax(scene6, {
 		var FrameFront2 = document.getElementById('scene6Layer2');
 
 
-		scene3.addEventListener('mouseleave', (e) => {
+		/*scene3.addEventListener('mouseleave', (e) => {
 			
 			scene4.style.animation = "0.7s ease-in 1 forwards appear"
 		});
@@ -115,7 +128,7 @@ var parallaxInstance4 = new Parallax(scene6, {
 		FrameFront1.addEventListener('mouseleave', (e) => {
 			
 			Frame2.style.animation = "0.7s ease-in 1 forwards appear2"
-		});
+		});*/
 
 		/*var TeaMain = document.getElementById('TeaMain');
 		var Tea2 = document.getElementById('Tea2');
@@ -154,7 +167,7 @@ var buttonUpStyle = {
 };
 
  
-		var buttonDownFrameStyle = {
+		let buttonDownFrameStyle = {
 	height: "10vh",
 	width: "5vw",
 	justifySelf: "flex-end",
@@ -167,7 +180,7 @@ var buttonUpStyle = {
 
 };
 
-var buttonUpFrameStyle = {
+let buttonUpFrameStyle = {
 	height: "10vh",
 	width: "5vw",
 	justifySelf: "flex-end",
@@ -179,6 +192,16 @@ var buttonUpFrameStyle = {
 	transform: "rotate(-90deg)",
 
 };
+
+var Frame1 = document.getElementById('scene5image1');
+var Frame2 = document.getElementById('scene6image1');
+var FrameFront1 = document.getElementById('scene5Layer2');
+var FrameFront2 = document.getElementById('scene6Layer2');
+var scene3 = document.getElementById("scene3");
+var scene4 = document.getElementById("scene4");
+var scene5 = document.getElementById("scene5");
+var scene6 = document.getElementById("scene6");
+
 		return (
 			<div id="ProjectsContainer">
 				{" "}
@@ -218,7 +241,7 @@ var buttonUpFrameStyle = {
 					<div id="ProjectsLayer3" data-depth="0.6" />
 					<div onWheel={this.onScroll} id="ProjectsLayer4" data-depth="0.9">
 						<a href="https://bhdhouseofteas.herokuapp.com"><h1 className="h1Projects" id="TeaTitle">MERN Ecommerce website</h1></a>		
-				        <button onScroll={this.onScroll} style={buttonDownStyle} onClick={() => scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
+				        <button onScroll={this.onScroll} style={buttonDownStyle} onClick={() => {scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'}) ; scene4.style.animation = "0.7s ease-in 1 forwards appear"}}></button>
 					    {/*<div><img onClick={() => scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})} className="ArrowClass" id="Arrow1" src="Arrow.gif" alt="arrow"/></div>*/}
 					</div>
 				</div>
@@ -228,7 +251,7 @@ var buttonUpFrameStyle = {
 				<div id="scene4Layer1" data-depth="0.2"><img id="scene4image1" src="dungeonOfArcana.png" alt="rogue game" /></div>
 				<div onWheel={this.onScroll} id="scene4Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Rogue-Like Game</h1></a>
 				<button onScroll={this.onScroll} style={buttonUpStyle} onClick={() => scrollToComponent(this.Scene3, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
-				<button onScroll={this.onScroll} style={buttonDownStyle} onClick={() => scrollToComponent(this.Scene5, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
+				<button onScroll={this.onScroll} style={buttonDownStyle} onClick={() => {scrollToComponent(this.Scene5, { offset: 0, align: 'center', duration: 500, ease:'inExpo'}); Frame1.style.animation = "0.7s ease-in 1 forwards appear1"}}></button>
 				</div>
 				</div>
                 <div className="scenes" id="scene5" ref={(div) => { this.Scene5 = div; }}>
@@ -236,7 +259,7 @@ var buttonUpFrameStyle = {
 				{/*<div id="scene5Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Rogue-Like Game</h1></a></div>*/}
                 <div onWheel={this.onScroll} id="scene5Layer2" data-depth="0.9">
                 <button onScroll={this.onScroll} style={buttonUpFrameStyle} onClick={() => scrollToComponent(this.Scene4, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button>
-                <button onScroll={this.onScroll} style={buttonDownFrameStyle} onClick={() => scrollToComponent(this.Scene6, { offset: 0, align: 'center', duration: 500, ease:'inExpo'})}></button></div>
+                <button onScroll={this.onScroll} style={buttonDownFrameStyle} onClick={() => {scrollToComponent(this.Scene6, { offset: 0, align: 'center', duration: 500, ease:'inExpo'}); Frame2.style.animation = "0.7s ease-in 1 forwards appear2"}}></button></div>
                 </div>
 				<div className="scenes" id="scene6" ref={(div) => { this.Scene6 = div; }}>
 				<div id="scene6Layer1" data-depth="0.2" data-pointer-events="all">{/*<img id="scene6image1" src="RandomQuoteGenerator.png" alt="random quote" />*/}<iframe style={{ opacity: "0", height: "100vh", width: "100vw"}} id="scene6image1" src="https://codepen.io/oristar2018/full/JZpEWr/" /></div>
