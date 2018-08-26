@@ -7,7 +7,7 @@ render() {
 
 return (
 	<div id="formContainer">
-	    <div id="about">about placeholder</div>
+	    <div id="about">about placeholder, text about me, my life, github link, facebook profile, twitter, hackerrank logo other logos etc..</div>
 		<form>
 			<h1>Contact</h1>
 			<label for="name" className="labels">Name</label>

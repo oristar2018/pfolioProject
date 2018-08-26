@@ -21,13 +21,13 @@ class App extends Component {
              <h1 id="title">Logo/Dambreville Portfolio</h1>
              </div>
              <div id="NavLinkDiv">
-              <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "red" }}>
+              <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "white" }}>
                 Home
               </NavLink>
-               <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "red" }}>
+               <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "white" }}>
                 Projects
               </NavLink>
-              <NavLink className="NavLink" exact strict to="/Contacts" exacy strict>Contact</NavLink>
+              <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "white" }}>Contact</NavLink>
            </div>
             </nav>
             <TransitionGroup>

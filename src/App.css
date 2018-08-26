@@ -1,6 +1,18 @@
 body{
   overflow-x: hidden;
   overflow-y: scroll;
+  background: #984B43;
+
+}
+
+h1 {
+  font-family: 'Oxygen', serif;
+  color: #EAC67A;
+}
+
+div {
+  font-family: 'Oxygen', serif;
+  color: #010b13 ;
 }
 
 #formContainer {
@@ -21,6 +33,7 @@ form {
   height: 90vh;
   width: 50vw;
   top: 10vh;
+
 }
 
 #about {
@@ -32,7 +45,12 @@ form {
   height: 90vh;
   width: 50vw;
   top: 10vh;
+  background: #18121E;
+  color: white;
+
 }
+
+
 
 .App {
   text-align: center;
@@ -45,7 +63,7 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;*/
-  background: silver;
+  background: #233237;
   height: 10vh;
   width: 100vw;
   z-index: 2;
@@ -98,7 +116,8 @@ form {
 .NavLink {
   text-align: center;
   margin-right: 2vw;
-  margin-left: 2vw
+  margin-left: 2vw;
+  color: #EAC67A;
 }
 
 .fade-enter {
@@ -432,7 +451,9 @@ form {
 
 .quotes {
   position: relative;
-  background: silver;
+  background: #18121E;
+  color: #EAC67A;
+
 }
 
 #slideIn1 {
@@ -568,7 +589,7 @@ left: 68vw;
 #scene3 {
   height: 90vh;
   width: 100vw;
-  background: cyan;
+  background: #CAEBF2;
 }
 
 #ProjectsLayer1 {
@@ -698,7 +719,8 @@ left: 68vw;
 
 .h1Projects  {
 
-  background: silver;
+  background: #18121E;
+  color: #EAC67A;
 }
 
 #plain2 {
@@ -714,7 +736,7 @@ left: 68vw;
 #scene4 {
   height: 90vh;
   width: 100vw;
-  background: cyan;
+  background: #CAEBF2;
   opacity: 0;
 };
 
@@ -943,6 +965,8 @@ left: 68vw;
 #OriginRight {
   height: 90vh;
   width: 100vw;
+  background: #18121E;
+  color: #EAC67A;
 }
 
 #OriginRightUp {
@@ -953,7 +977,11 @@ left: 68vw;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  background: #18121E;
+  color: #EAC67A;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 
@@ -965,14 +993,23 @@ left: 68vw;
   display: flex !important;
   flex-direction: column;
   justify-content: center;
-  align-items: center
+  align-items: center;
+  background: #18121E;
+  color: #EAC67A;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 @keyframes OriginUp {
   0% {
-      top: -10000px;
+      top: -2000px;
+      opacity: 0;
   }
 
+85% {
+
+ opacity: 1
+}
   100% {
     top: 0;
     /*opacity: 1;*/
@@ -981,7 +1018,7 @@ left: 68vw;
 
 @keyframes OriginDown {
   0% {
-      bottom: -10000px;
+      bottom: -2000px;
   }
 
   100% {
@@ -1281,4 +1318,28 @@ left: 68vw;
   flex-direction: row;
   justify-content: center;
 
+}
+
+
+.animButton:hover {
+position: relative;
+animation: 1s linear infinite buttonMove;
+
+}
+
+button:hover {
+ cursor: pointer;
+}
+
+@keyframes buttonMove {
+  0% {
+    top: 0;
+  }
+
+50% {
+top: -1vh;
+}
+  100% {
+ top: 0;
+  }
 }
