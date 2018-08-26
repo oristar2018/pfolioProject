@@ -225,12 +225,32 @@ class LandingPage extends Component {
 
   }, 11000)};*/
 
+    var OriginRightUp = document.getElementById('OriginRightUp');
+    var OriginRightDown = document.getElementById('OriginRightDown');
+
+    ParisForeground.addEventListener('mouseover', (e) => {
+      OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
+      OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+
+    } )
+
+    Foreground.addEventListener('mousewheel', (e) => {
+      if (e.deltaY > 0) {
+     // console.log('goes here foreground');
+      OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
+      OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+
+   }});
+
+
+
  
 
     };
 
     Scroll(e) {
-
+   
+   e.preventDefault();
 
    if (e.deltaY > 0) {
       switch(e.target.id) {
@@ -340,15 +360,24 @@ class LandingPage extends Component {
       var quote4 = document.getElementById('quote4');
       var quote5 = document.getElementById('quote5');
 
-        quote1.style.animation = "1s ease-out 1.5s forwards quote1Anim";
-        quote2.style.animation = "1s ease-out 2.5s 1 forwards quote2Anim";
-        quote3.style.animation = "1s ease-out 3.5s 1 forwards quote3Anim";
-        quote4.style.animation = "1s ease-out 4.5s 1 forwards quote4Anim";
-        quote5.style.animation = "1s ease-out 5.5s 1 forwards quote5Anim";    
+        quote1.style.animation = "1s ease-out 1s forwards quote1Anim";
+        quote2.style.animation = "1s ease-out 2s 1 forwards quote2Anim";
+        quote3.style.animation = "1s ease-out 3s 1 forwards quote3Anim";
+        quote4.style.animation = "1s ease-out 4s 1 forwards quote4Anim";
+        quote5.style.animation = "1s ease-out 5s 1 forwards quote5Anim";    
   }
+
+ function TechAnim3() {
+   var OriginRightUp = document.getElementById('OriginRightUp');
+   var OriginRightDown = document.getElementById('OriginRightDown');
+   OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
+   OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+ }
+
+
       let buttonDownFrameStyle = {
-  height: "10vh",
-  width: "5vw",
+  height: "5vh",
+  width: "2.5vw",
   justifySelf: "flex-end",
   position: "relative",
   background: "url('Arrow.gif')",
@@ -359,8 +388,8 @@ class LandingPage extends Component {
 };
 
 let buttonUpFrameStyle = {
-  height: "10vh",
-  width: "5vw",
+  height: "5vh",
+  width: "2.5vw",
   justifySelf: "flex-end",
   position: "relative",
   background: "url('Arrow.gif')",
@@ -377,13 +406,14 @@ let buttonUpFrameStyle = {
   <div data-depth="0.2" id="layer1" style={{background: "cyan", width: "130vw", overflowX: "hidden"}}></div>
   <div id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Dambreville Benoit</h1><h1 id="foreground3">...and i provide Solutions</h1></div>
 </div>
+<div id="buttonDownDiv"><button onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim3()}} style={buttonDownFrameStyle}></button></div>
 <div ref={(div) => {this.Plain = div}} onWheel={this.Scroll} className="Plain" id="plain">
 
 <div id="Background" style={{ height: "90vh", width: "50vw", background: "url('Cloudy.png')"}}></div>
 <div id="BackgroundAnims"  style={{ height: "90vh", width: "50vw"}}><img id="Dove" style={{height: "5vh", width: "5vw"}} src="Dove.gif"/></div>
 <div id="ParisBackground" data-depth="0.3"><img id="Eiffel" style={TowerStyle} src="EiffelTower.png" alt="Eiffel tower"/>
 </div>
-<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp">test</div><div id="OriginRightDown">test2</div></div></div>
+<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp">I live and work in Paris</div><div id="OriginRightDown">but i m open to working abroad</div></div></div>
 <div id="ParisSublayers2" data-depth="0.5"><img style={{width: "8.5vw", height: "15vh", position: "relative", top: "69vh"}} src="Tree1.png" alt="Tree" /><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="Tree1.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="Tree1.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="Tree1.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-5vw"}} src="Tree1.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-4vw"}} src="Tree1.png" alt="Tree"/></div>
 <div id="Man" style={{width: "50vw", height: "90vh"}} data-depth="0.6"><img style={{height: "10vh", width: "6.5vw", position: "relative", top: "70vh", left: "21.5vw"}} id="ManGif" src="WalkBack.gif"/></div>
@@ -393,7 +423,7 @@ let buttonUpFrameStyle = {
 <div ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>arrow Up</button><button id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim2()}} style={buttonDownFrameStyle}>arrow Down</button></div>
 
 </div>
-<section onWheel={this.Scroll} ref={(section) => {this.Content = section}} id="content">
+<section id="content">
 {/*<p id="slideIn1">I am a self taught full-stack Javascript developper.</p>
 <p>I enjoy cracking problems, thinking about the best possible design patterns and maximizing efficiency.</p>
 <p>To me, coding is no only a means of implementing an algorithm or solution to a problem but also an artform. Like litteral language translation, the wording and the turn of phrase you employ will greatly affect your reader/interlocutor. </p>
@@ -427,7 +457,8 @@ test
   
 
   </div>
-  <div onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">The technologies that I've learnt and love using...everyday</h1><h1 id="foreground6"></h1></div>
+  <div onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">The technologies that I've learnt and love using...everyday</h1><h1 id="foreground6"></h1>
+  <button id="TechListUpButton" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}></button></div>
 </div>
 
 

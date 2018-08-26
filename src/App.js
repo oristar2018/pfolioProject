@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, NavLink } from "react-router-dom";
 import  Route  from "react-router-dom/Route";
 import LandingPage from "./LandingPage";
 import Projects from "./Projects";
+import Contact from "./Contact";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Parallax } from "react-parallax";
 import logo from "./logo.svg";
@@ -34,7 +35,7 @@ class App extends Component {
                 <Switch location={location}>
                 <Route path="/" exact strict component={LandingPage} />
                 <Route path="/Projects" exact strict component={Projects}/>
-                <Route path="/Contacts" exact strict render={() => (<div>Contacts'route</div>)} />
+                <Route path="/Contacts" exact strict component={Contact} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>

@@ -3,6 +3,36 @@ body{
   overflow-y: scroll;
 }
 
+#formContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 50vw;
+  top: 10vh;
+}
+
+#about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 50vw;
+  top: 10vh;
+}
 
 .App {
   text-align: center;
@@ -153,6 +183,11 @@ body{
           justify-content: center;
 
 
+}
+
+#TechListUpButton {
+  position: relative;
+  top: 30vh;
 }
 
 #foreground4, #foreground5, #foreground6 {
@@ -332,7 +367,7 @@ body{
   top: 35vh;
   height: 40vh;
   width: 100vw;
-   margin-bottom: 25vh;
+   margin-bottom: 50vh;
 }
 
 #plain {
@@ -425,8 +460,8 @@ opacity: 0;
 }
 
 #quote2{
-top: 10vh;
-left: 10vw;
+top: 13vh;
+left: 20vw;
 opacity: 0;
   
 }
@@ -443,8 +478,8 @@ opacity: 0;
 
 #quote3 {
 
-  left: 75vw;
-  top: 15vh;
+  left: 7.5vw;
+  top: 25vh;
   opacity: 0;
 }
 
@@ -478,6 +513,8 @@ opacity: 0;
 #quote5 {
 
 opacity: 0;
+top: 45vh;
+left: 68vw;
   
 }
 
@@ -909,15 +946,50 @@ opacity: 0;
 }
 
 #OriginRightUp {
+  position: relative;
   height: 45vh;
   width: 50vw;
+  opacity: 1;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
 
 
 #OriginRightDown {
+  position: relative;
   height: 45vh;
   width: 50vw;
+  opacity: 1;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
 }
+
+@keyframes OriginUp {
+  0% {
+      top: -10000px;
+  }
+
+  100% {
+    top: 0;
+    /*opacity: 1;*/
+  }
+}
+
+@keyframes OriginDown {
+  0% {
+      bottom: -10000px;
+  }
+
+  100% {
+    bottom: 0;
+    /*opacity: 1;*/
+  }
+}
+
 
 
 #Eiffel {
@@ -1200,4 +1272,13 @@ opacity: 0;
     left: 23vw;
     
   }
+}
+
+#buttonDownDiv {
+  height: 25vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
 }
