@@ -18,14 +18,14 @@ class App extends Component {
             <div id="MasterContainer">
             <nav id="mainNavBar">
             <div id="TitleDiv">
-             <h1 id="title">Logo/Dambreville Portfolio</h1>
+             <h1 id="title">B.H.D Developper</h1>
              </div>
              <div id="NavLinkDiv">
               <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "white" }}>
                 Home
               </NavLink>
                <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "white" }}>
-                Projects
+                Work
               </NavLink>
               <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "white" }}>Contact</NavLink>
            </div>

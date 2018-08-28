@@ -10,7 +10,9 @@ class LandingPage extends Component {
       this.state = {
         demo: true,
       };
-      this.Scroll = this.Scroll.bind(this)
+      this.Scroll = this.Scroll.bind(this),
+      this.Touch = this.Touch.bind(this)
+      
     };
 
 
@@ -48,7 +50,7 @@ class LandingPage extends Component {
     	relativeInput: true,
     	hoverOnly: true,
        scalarX: 2.5,
-      scalarY: 1.5,
+      scalarY: 0,
       pointerEvents: true,
 
 
@@ -59,7 +61,7 @@ class LandingPage extends Component {
       relativeInput: true,
       hoverOnly: true,
        scalarX: 2.5,
-      scalarY: 1.5,
+      scalarY: 0,
       pointerEvents: true,
     });
 
@@ -72,7 +74,7 @@ class LandingPage extends Component {
       pointerEvents: true,
     });
 
-     window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
 
     var plain = document.getElementById('plain');
    /* var slideIn1 = document.getElementById('slideIn1');
@@ -247,7 +249,12 @@ class LandingPage extends Component {
 
  
 
-    };
+    };  
+
+    Touch(e) {
+     
+    }
+
 
     Scroll(e) {
    
@@ -309,7 +316,8 @@ class LandingPage extends Component {
 
 
 	render() {
-
+  let body = document.querySelector('body');
+  body.addEventListener('touchmove', (e) => {e.preventDefault()}, {passive: false})
 	var TowerStyle = {
 
    
@@ -407,11 +415,12 @@ let buttonUpFrameStyle = {
 };
 
     return (
-    	<div id="LandingContainer" onWheel={this.Scroll}>
-    	<div id="scene" style={{background: "#18121E", width: "130vw", overflowX: "hidden"}}>
-  }
-  <div data-depth="0.2" id="layer1" style={{background: "#18121E", width: "130vw", overflowX: "hidden"}}></div>
-  <div id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Dambreville Benoit</h1><h1 id="foreground3">...and i provide Solutions</h1></div>
+    	<div id="LandingContainer" onTouchMove={this.Touch} onWheel={this.Scroll}>
+    	<div id="scene" style={{background: "#18121E", width: "100vw", overflowX: "hidden"}}>
+  
+  <div data-depth="0.2" id="layer1" style={{background: "#18121E", width: "100vw", overflowX: "hidden"}}></div>
+  <div data-depth="0.6" id="navTextContainer"><p id="navText">Use mousewheel or click/tap buttons to navigate</p></div>
+  <div onTouchMove={this.Touch} id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Benoit-Henri</h1><h1 id="foreground3">...and i provide Solutions</h1></div>
 </div>
 <div onWheel={this.Scroll} id="buttonDownDiv"><button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim3()}} style={buttonDownFrameStyle}>Down</button></div>
 <div ref={(div) => {this.Plain = div}} onWheel={this.Scroll} className="Plain" id="plain">
@@ -420,14 +429,14 @@ let buttonUpFrameStyle = {
 <div id="BackgroundAnims"  style={{ height: "90vh", width: "50vw"}}><img id="Dove" style={{height: "5vh", width: "5vw"}} alt="Dove" src="Dove.gif"/></div>
 <div id="ParisBackground" data-depth="0.3"><img id="Eiffel" style={TowerStyle} src="EiffelTower.png" alt="Eiffel tower"/>
 </div>
-<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp">I live and work in Paris</div><div id="OriginRightDown">but i m open to working abroad</div></div></div>
+<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp"><p id="OriginText">I live and work in Paris.</p></div><div id="OriginRightDown"><p id="OriginText2">I also enjoy working abroad. <br/> Switzerland, England, Luxembourg...</p></div></div></div>
 <div id="ParisSublayers2" data-depth="0.5"><img style={{width: "8.5vw", height: "15vh", position: "relative", top: "69vh"}} src="oak.png" alt="Tree" /><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-5vw"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-4vw"}} src="oak.png" alt="Tree"/></div>
 <div id="Man" style={{width: "50vw", height: "90vh"}} data-depth="0.6"><img alt="walking man" style={{height: "10vh", width: "6.5vw", position: "relative", top: "70vh", left: "21.5vw"}} id="ManGif" src="WalkBack.gif"/></div>
 <div id="ParisSublayers" style={{width: "50vw", height: "90vh"}} data-depth="0.7"><img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 </div>
-<div ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim2()}} style={buttonDownFrameStyle}>arrow Down</button></div>
+<div onTouchMove={this.Touch} ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim2()}} style={buttonDownFrameStyle}>arrow Down</button></div>
 
 </div>
 <section id="content" data-pointer-events="all">
@@ -442,14 +451,14 @@ let buttonUpFrameStyle = {
 <div className="contentDiv" data-depth="0.8"><div className="quotes" id="quote5">I always believe in making my code better.</div></div>
 
 
-<div data-pointer-events="all" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll} id="contentForeground" data-depth="0.9"><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={() => {scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim()}} style={buttonDownFrameStyle}>down button</button></div>
+<div onTouchMove={this.Touch} data-pointer-events="all" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll} id="contentForeground" data-depth="0.9"><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={() => {scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim()}} style={buttonDownFrameStyle}>down button</button></div>
 
 
 test
 
 </section>
 
-<div id="scene2" style={{background: "white"}} >
+<div id="scene2"  ref={(div) => {this.ButtonWorks = div}} style={{background: "white"}} >
   <div data-depth="0.1" id="layer2" style={{background: "#18121E"}}></div>
   <div data-depth="0.4" id="scene2Layer2">
   <img src="mongodb2.png" style={{height: "30vh"}}className="techImages" id="mongodbLogo" alt="tech logo" />
@@ -464,7 +473,7 @@ test
   
 
   </div>
-  <div onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">The technologies that I've learnt and love using...everyday</h1><h1 id="foreground6"></h1>
+  <div onTouchMove={this.Touch} onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">The technologies that I've learnt and love using...everyday</h1><h1 id="foreground6"></h1>
   <button id="TechListUpButton" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>Top</button></div>
 </div>
 

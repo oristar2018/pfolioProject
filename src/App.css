@@ -8,6 +8,7 @@ body{
 h1 {
   font-family: 'Oxygen', serif;
   color: #EAC67A;
+
 }
 
 div {
@@ -50,7 +51,10 @@ form {
 
 }
 
-
+#AboutH1 {
+  width: 50vw;
+  text-align: center
+}
 
 .App {
   text-align: center;
@@ -206,7 +210,7 @@ form {
 
 #TechListUpButton {
   position: relative;
-  top: 30vh;
+  top: 25vh;
 }
 
 #foreground4, #foreground5, #foreground6 {
@@ -969,6 +973,17 @@ left: 68vw;
   color: #EAC67A;
 }
 
+#OriginText {
+  width: 25vw;
+  height: auto;
+
+}
+
+#OriginText2 {
+   width: 25vw;
+  height: auto;
+}
+
 #OriginRightUp {
   position: relative;
   height: 45vh;
@@ -982,6 +997,7 @@ left: 68vw;
   color: #EAC67A;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 
@@ -998,6 +1014,7 @@ left: 68vw;
   color: #EAC67A;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 @keyframes OriginUp {
@@ -1343,3 +1360,722 @@ top: -1vh;
  top: 0;
   }
 }
+
+#Links {
+  height: 45vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.LinksImage {
+
+  height: 10vh;
+  width: 5vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+}
+
+.LinksImage:hover {
+
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+#About {
+  height: 45vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#AboutFlavourText {
+  width: 35vw;
+  color: white;
+  text-align: justify;
+  line-height: 1.5;
+  text-justify: inter-word;
+  overflow-y: scroll;
+
+
+}
+
+.inputs {
+  vertical-align: center;
+  line-height: 1.5;
+  width: 14vw;
+  height: 2.5vh;
+  margin-top: 0.75vh;
+  margin-bottom: 0.75vh;
+  border: 1px #18121E solid;
+  padding: 1vw 1vh;
+  background: #18121E;
+  color: white;
+}
+
+#message {
+  vertical-align: center;
+  line-height: 1.5;
+  width: 14vw;
+  height: 7.5vh;
+  margin-top: 0.75vh;
+  margin-bottom: 0.75vh;
+   border: 1px #18121E solid;
+   padding: 1vw 1vh;
+   background: #18121E;
+  color: white;
+}
+
+.labels {
+  width: 15vw;
+  color: #EAC67A;
+  font-weight: bold;
+  font-size: 0.75rem;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+}
+
+#submit {
+  border: 1px #EAC67A solid;
+  outline: none;
+  width: 7.5vw;
+  height: 7.5vh;
+  color: #EAC67A;
+   background: #18121E;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background: #233237;
+  color: white;
+}
+
+#navTextContainer {
+  width: 100vw;
+  height: 40vh;
+  display: flex !important;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#navText {
+  opacity: 0;
+  height: 20vh;
+  width: 20vw;
+  color: #EAC67A;
+  font-size: 1rem;
+  animation: 1s linear 2s 1 forwards opaqueFour;
+
+
+}
+
+@keyframes opaqueFour {
+
+  0% {
+    opacity: 0;
+     
+  }
+
+  100% {
+    opacity: 1
+     
+  }
+}
+
+
+
+@media (max-width: 1241px) {
+  #quote4 {
+    left: 15vw;
+  }
+
+  #scene4image1 {
+  height: 100vh;
+}
+
+}
+
+@media (max-width: 1023px) {
+  #quote4 {
+    left: 7.5vw;
+  }
+  #scene4image1 {
+  height: 100vh;
+}
+
+.animButton, #TechListUpButton, .ProjectsButton {
+
+  width: 15vw !important;
+  height: 10vh !important;
+}
+
+}
+
+@media (max-width: 990px) {
+
+  h1 {
+  font-size: 1.5rem
+}
+
+#OriginRightUp, #OriginRightDown {
+
+  font-size: 1.5rem
+}
+
+  #title {
+    font-size: 1rem
+  }
+
+  #AboutFlavourText {
+    font-size: 0.75rem
+  }
+
+  .LinksImage {
+    width: 10vw;
+
+  }
+
+  #submit {
+    width: 14vw;
+  }
+
+
+
+#scene4image1 {
+  height: 100vh;
+}
+.inputs {
+  width: 24vw;
+
+}
+
+.labels {
+  width: 25vw;
+}
+
+#message {
+  width: 24vw;
+}
+
+}
+
+
+@media (max-width: 937px) {
+
+   #quote2, #quote3, #quote4 {
+    width: 80vw;
+  }
+
+  #quote5 {
+    left: 48vw;
+  }
+}
+
+@media (max-width: 760px) {
+#quote1, #quote2, #quote3, #quote4, #quote5 {
+    font-size: 0.9rem
+  }
+
+
+.animButton, #TechListUpButton, .ProjectsButton {
+
+  width: 15vw !important;
+  height: 10vh !important;
+}
+
+
+}
+
+
+@media (max-width: 640px) {
+
+#foreground5, #foreground4, #foreground6 {
+  font-size: 1rem
+}
+
+#mongodbLogo {
+  height: 20vh !important;
+}
+
+}
+@media (max-width: 580px) {
+  #quote5 {
+    left: 23vw;
+  }
+
+  #navText {
+    font-size: 0.8rem
+  }
+}
+
+
+
+@media (max-width: 402px) {
+  #quote5 {
+    left: 5vw;
+  }
+
+ #foreground5, #foreground4, #foreground6 {
+    font-size: 0.75rem
+  }
+
+  @keyframes foreground5 {
+  0% {
+     top: 0;
+
+  }
+
+  100% {
+     
+     top: -5vh;
+  }
+}
+}
+
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+  /* iPhone, Android rules here */
+  #quote1, #quote2, #quote3, #quote4, #quote5 {
+    opacity: 1;
+    font-size: 1.5rem
+  }
+#scene4image1 {
+  height: 100vh;
+}
+
+  #quote1 {
+
+top: 50vh;
+left: 20vw;
+width: 80vw;
+opacity: 0;
+}
+
+@keyframes quote1Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote2{
+top: 6.5vh;
+left: 15vw;
+opacity: 0;
+width: 85vw;
+  
+}
+
+@keyframes quote2Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote3 {
+
+  left: 3.5vw;
+  top: 25vh;
+  opacity: 0;
+  width: 90vw;
+}
+
+@keyframes quote3Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote4 {
+
+  top: 75vh;
+  left: 17vw;
+  opacity: 0;
+  width: 83vw;
+}
+
+@keyframes quote4Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote5 {
+
+opacity: 0;
+top: 45vh;
+left: 28vw;
+width: 72vw;
+  
+}
+
+@keyframes quote5Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+h1 {
+  font-size: 2rem
+}
+
+#OriginRightUp, #OriginRightDown {
+
+  font-size: 2rem
+}
+
+.animButton, #TechListUpButton, .ProjectsButton  {
+
+  width: 15vw !important;
+  height: 10vh !important;
+}
+
+.labels {
+
+  width: 25vw;
+}
+
+.inputs, #message {
+  width: 24vw;
+}
+
+#AboutFlavourText {
+  font-size: 1.2rem;
+  overflow-y: scroll
+}
+
+
+
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+  /* iPhone, Android rules here */
+  #quote1, #quote2, #quote3, #quote4, #quote5 {
+    opacity: 1;
+    font-size: 0.75rem
+  }
+
+  #navText {
+    font-size: 0.8rem
+  }
+
+  #mongodbLogo {
+  height: 15vh !important;
+}
+
+
+#scene4image1 {
+  height: 100vh;
+}
+
+
+
+  #quote1 {
+
+top: 50vh;
+left: 20vw;
+width: 80vw;
+opacity: 0;
+}
+
+@keyframes quote1Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote2{
+top: 6.5vh;
+left: 15vw;
+opacity: 0;
+width: 85vw;
+  
+}
+
+@keyframes quote2Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote3 {
+
+  left: 3.5vw;
+  top: 25vh;
+  opacity: 0;
+  width: 90vw;
+}
+
+@keyframes quote3Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote4 {
+
+  top: 75vh;
+  left: 17vw;
+  opacity: 0;
+  width: 83vw;
+}
+
+@keyframes quote4Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote5 {
+
+opacity: 0;
+top: 45vh;
+left: 28vw;
+width: 72vw;
+  
+}
+
+@keyframes quote5Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+h1 {
+  font-size: 1rem
+}
+
+#OriginRightUp, #OriginRightDown {
+
+  font-size: 1rem
+}
+
+.animButton, #TechListUpButton, .ProjectsButton  {
+
+  width: 15vw !important;
+  height: 10vh !important;
+}
+
+.labels {
+
+  width: 25vw;
+}
+
+.inputs, #message {
+  width: 24vw;
+}
+
+#AboutFlavourText {
+  font-size: 0.6rem;
+  overflow-y: scroll
+}
+
+
+
+}
+
+@media only screen and (min-device-width: 568px) and (max-device-width: 812px) and (orientation: landscape) {
+  /* iPhone, Android rules here */
+  #quote1, #quote2, #quote3, #quote4, #quote5 {
+    opacity: 1;
+    font-size: 0.75rem
+  }
+
+#scene4image1 {
+  height: 100vh;
+}
+
+
+
+  #quote1 {
+
+top: 50vh;
+left: 20vw;
+width: 80vw;
+opacity: 0;
+}
+
+@keyframes quote1Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote2{
+top: 6.5vh;
+left: 15vw;
+opacity: 0;
+width: 85vw;
+  
+}
+
+@keyframes quote2Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote3 {
+
+  left: 3.5vw;
+  top: 25vh;
+  opacity: 0;
+  width: 90vw;
+}
+
+@keyframes quote3Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote4 {
+
+  top: 75vh;
+  left: 17vw;
+  opacity: 0;
+  width: 83vw;
+}
+
+@keyframes quote4Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+#quote5 {
+
+opacity: 0;
+top: 45vh;
+left: 28vw;
+width: 72vw;
+  
+}
+
+@keyframes quote5Anim {
+  0% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+h1 {
+  font-size: 1rem
+}
+
+#OriginRightUp, #OriginRightDown {
+
+  font-size: 1rem
+}
+
+.animButton, #TechListUpButton, .ProjectsButton  {
+
+  width: 15vw !important;
+  height: 10vh !important;
+}
+
+.labels {
+
+  width: 25vw;
+}
+
+.inputs, #message {
+  width: 24vw;
+}
+
+#AboutFlavourText {
+  font-size: 0.6rem;
+  overflow-y: scroll
+}
+
+#mongodbLogo {
+  height: 20vh;
+}
+
+
+}
+
+.makeInteractive2 {
+  position: relative;
+    top: -30vh;
+    width: 5vw;
+    height: 5vh;
+    left: 10vw;
+
+}
+
+
+
