@@ -259,6 +259,7 @@ class LandingPage extends Component {
     Scroll(e) {
    
    e.preventDefault();
+   console.log('fires');
 
    if (e.deltaY > 0) {
       switch(e.target.id) {
@@ -439,7 +440,7 @@ let buttonUpFrameStyle = {
 <div onTouchMove={this.Touch} ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim2()}} style={buttonDownFrameStyle}>arrow Down</button></div>
 
 </div>
-<section id="content" data-pointer-events="all">
+<section id="content">
 {/*<p id="slideIn1">I am a self taught full-stack Javascript developper.</p>
 <p>I enjoy cracking problems, thinking about the best possible design patterns and maximizing efficiency.</p>
 <p>To me, coding is no only a means of implementing an algorithm or solution to a problem but also an artform. Like litteral language translation, the wording and the turn of phrase you employ will greatly affect your reader/interlocutor. </p>
@@ -451,10 +452,8 @@ let buttonUpFrameStyle = {
 <div className="contentDiv" data-depth="0.8"><div className="quotes" id="quote5">I always believe in making my code better.</div></div>
 
 
-<div onTouchMove={this.Touch} data-pointer-events="all" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll} id="contentForeground" data-depth="0.9"><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={() => {scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim()}} style={buttonDownFrameStyle}>down button</button></div>
+<div  id="contentForeground" data-depth="0.9" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll}><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={() => {scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim()}} style={buttonDownFrameStyle}>down button</button></div>
 
-
-test
 
 </section>
 

@@ -4,6 +4,7 @@ import  Route  from "react-router-dom/Route";
 import LandingPage from "./LandingPage";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Blog from "./Blog";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { Parallax } from "react-parallax";
 import logo from "./logo.svg";
@@ -27,6 +28,7 @@ class App extends Component {
                <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "white" }}>
                 Work
               </NavLink>
+              <NavLink className="NavLink" exact strict to="/blog" activeStyle={{ color: "white" }}>Blog</NavLink>
               <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "white" }}>Contact</NavLink>
            </div>
             </nav>
@@ -36,6 +38,7 @@ class App extends Component {
                 <Route path="/" exact strict component={LandingPage} />
                 <Route path="/Projects" exact strict component={Projects}/>
                 <Route path="/Contacts" exact strict component={Contact} />
+                <Route path="/blog" exact strict component={Blog} />
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
