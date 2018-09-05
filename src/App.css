@@ -1,7 +1,7 @@
 body{
   overflow-x: hidden;
   overflow-y: scroll;
-  background: #984B43;
+  background: /*#984B43*/ #233237;
 
 }
 
@@ -16,6 +16,13 @@ body{
 
 }
 
+#article1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33vw;
+}
+
 #blogElement1 {
   height: 90vh;
   width: 66vw;
@@ -25,11 +32,15 @@ body{
   position: relative; 
   top: 10vh;
   background: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   font-family: 'Oxygen', serif;
-  color: #EAC67A;
+  color: /*#EAC67A;*/ white;
 
 }
 
@@ -89,10 +100,11 @@ form {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;*/
-  background: #233237;
+  background: #18121E;
   height: 10vh;
   width: 100vw;
   z-index: 2;
+  border: 0.5px #233237 solid;
 }
 
 .scenes {
@@ -143,7 +155,7 @@ form {
   text-align: center;
   margin-right: 2vw;
   margin-left: 2vw;
-  color: #EAC67A;
+  color: white;
 }
 
 .fade-enter {
@@ -478,7 +490,7 @@ form {
 .quotes {
   position: relative;
   background: #18121E;
-  color: #EAC67A;
+  color: /*#EAC67A;*/ white;
 
 }
 
@@ -992,7 +1004,7 @@ left: 68vw;
   height: 90vh;
   width: 100vw;
   background: #18121E;
-  color: #EAC67A;
+  color: /*#EAC67A;*/ white;
 }
 
 #OriginText {
@@ -1016,7 +1028,7 @@ left: 68vw;
   justify-content: center;
   align-items: center;
   background: #18121E;
-  color: #EAC67A;
+  color: /*#EAC67A*/ white;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -1033,7 +1045,7 @@ left: 68vw;
   justify-content: center;
   align-items: center;
   background: #18121E;
-  color: #EAC67A;
+  color: /*#EAC67A*/ white;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -1086,6 +1098,7 @@ left: 68vw;
 }
 
 #Dove {
+  display: none;
   position: relative;
   -webkit-animation: 8s linear infinite Dove;
           animation: 8s linear infinite Dove;
@@ -1093,7 +1106,7 @@ left: 68vw;
   
 }
 
-@-webkit-keyframes Dove {
+/*@-webkit-keyframes Dove {
   0% {
       left: 0;
       transform: scale(0.8)
@@ -1255,9 +1268,11 @@ left: 68vw;
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-}
+}*/
 
-#ManGif {
+#Man { display: none };
+
+/*#ManGif {
   -webkit-clip-path: ellipse();
           clip-path: ellipse();
   -webkit-filter: invert(100%);
@@ -1348,7 +1363,7 @@ left: 68vw;
     left: 23vw;
     
   }
-}
+}*/
 
 #buttonDownDiv {
   height: 25vh;

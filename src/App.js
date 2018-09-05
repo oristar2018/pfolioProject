@@ -22,14 +22,14 @@ class App extends Component {
              <h1 id="title">B.H.D Developper</h1>
              </div>
              <div id="NavLinkDiv">
-              <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "white" }}>
+              <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "#EAC67A" }}>
                 Home
               </NavLink>
-               <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "white" }}>
+               <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "#EAC67A" }}>
                 Work
               </NavLink>
-              <NavLink className="NavLink" exact strict to="/blog" activeStyle={{ color: "white" }}>Blog</NavLink>
-              <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "white" }}>Contact</NavLink>
+              <NavLink className="NavLink" exact strict to="/blog" activeStyle={{ color: "#EAC67A" }}>Blog</NavLink>
+              <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "#EAC67A" }}>Contact</NavLink>
            </div>
             </nav>
             <TransitionGroup>
