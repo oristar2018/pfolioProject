@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import Parallax from 'parallax-js';
 import scrollToComponent from 'react-scroll-to-component';
+const Tech = require('./tech.js');
+
+
 
 
 class LandingPage extends Component {
@@ -12,6 +15,7 @@ class LandingPage extends Component {
       };
       this.Scroll = this.Scroll.bind(this),
       this.Touch = this.Touch.bind(this)
+      
       
     };
 
@@ -86,6 +90,218 @@ class LandingPage extends Component {
     	slideIn1.style.left = "0";
     	slideIn1.style.opacity = "1"
     })*/
+
+    /*
+
+    switch(event.target.id) {
+        case "foreground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+          if (event.key === "ArrowDown") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); };
+        break;
+
+
+        case "contentForeground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "foreground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+         if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "contentForeground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+
+
+    */
+    Foreground.focus();
+    Foreground.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    console.log(event, event.key, event.target.id);
+
+      switch(event.target.id) {
+        case "foreground":
+         if (event.key === "ArrowDown") {
+        Tech.TechAnim3();
+        ParisForeground.focus();
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "foreground":
+        if (event.key === "ArrowUp") {
+
+        Foreground.focus();
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+
+  });
+
+    ParisForeground.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    console.log(event, event.key, event.target.id);
+
+      switch(event.target.id) {
+        case "ParisForeground":
+         if (event.key === "ArrowDown") {
+        contentForeground.focus();
+        Tech.TechAnim2();
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "ParisForeground":
+        if (event.key === "ArrowUp") {
+        Foreground.focus();
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+
+  });
+
+      contentForeground.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    console.log(event, event.key, event.target.id);
+
+      switch(event.target.id) {
+        case "contentForeground":
+         if (event.key === "ArrowDown") {
+        Foreground2.focus();
+        Tech.TechAnim();
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "contentForeground":
+        if (event.key === "ArrowUp") {
+        ParisForeground.focus()
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+
+  });
+
+        Foreground2.addEventListener('keydown', (event) => {
+    event.preventDefault();
+    console.log(event, event.key, event.target.id);
+
+      switch(event.target.id) {
+        case "Foreground2":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "Foreground2":
+        if (event.key === "ArrowUp") {
+        contentForeground.focus();
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+
+  });
+
+
+
+
 
     var ReactLogo = document.getElementById('reactLogo');
 
@@ -256,6 +472,68 @@ class LandingPage extends Component {
     }
 
 
+    /*Key(event) {
+      console.log(event.target.id, event.key)
+
+      switch(event.target.id) {
+        case "foreground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+          if (event.key === "ArrowDown") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); };
+        break;
+
+
+        case "contentForeground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "foreground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+         if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "contentForeground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    }
+*/
     Scroll(e) {
    
    e.preventDefault();
@@ -264,20 +542,20 @@ class LandingPage extends Component {
    if (e.deltaY > 0) {
       switch(e.target.id) {
         case "foreground":
-        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
          case "ParisForeground":
-        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
 
         case "contentForeground":
-        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
         case "Foreground2":
-        scrollToComponent(this.Foreground2, { offset: 0, align: 'middle', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
         default:
@@ -289,19 +567,19 @@ class LandingPage extends Component {
     if (e.deltaY < 0) {
       switch(e.target.id) {
         case "foreground":
-        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
          case "ParisForeground":
-        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
         case "contentForeground":
-        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
         case "Foreground2":
-        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'});
         break;
 
         default:
@@ -318,15 +596,76 @@ class LandingPage extends Component {
 
 	render() {
   let body = document.querySelector('body');
+  
+      /*switch(event.target.id) {
+        case "foreground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+          if (event.key === "ArrowDown") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); };
+        break;
+
+
+        case "contentForeground":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+         if (event.key === "ArrowDown") {
+        scrollToComponent(this.Foreground2, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }
+
+    
+
+    
+      switch(event.target.id) {
+
+        case "foreground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+         case "ParisForeground":
+         if (event.key === "ArrowUp") {
+        scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "contentForeground":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        case "Foreground2":
+        if (event.key === "ArrowUp") {
+        scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'});};
+        break;
+
+        default:
+        return null
+      }*/
+
+
+
+
+
   body.addEventListener('touchmove', (e) => {e.preventDefault()}, {passive: false})
-	var TowerStyle = {
+
+	/*var TowerStyle = {
 
    
 
 
   }
-
-  function TechAnim() {
+*/
+  /*function TechAnim() {
            //var foreground = document.getElementById('content');
 var foreground4 = document.getElementById("foreground4");
 var foreground5 = document.getElementById("foreground5");
@@ -385,7 +724,7 @@ nodeLogo.style.animation = "1.5s linear 1.75s 1 forwards appear4";
    var OriginRightDown = document.getElementById('OriginRightDown');
    OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
    OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
- }
+ }*/
 
 
       let buttonDownFrameStyle = {
@@ -424,12 +763,16 @@ let buttonUpFrameStyle = {
   
   <div data-depth="0.2" id="layer1" style={{background:  /*"#18121E"*/ "url('banner.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", width: "100vw", overflowX: "hidden"}}></div>
   <div data-depth="0.6" id="navTextContainer"><p id="navText">Use mousewheel or click/tap buttons to navigate</p></div>
-  <div onTouchMove={this.Touch} id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Benoit-Henri</h1><h1 id="foreground3">...and i provide Solutions</h1></div>
+  <div  tabIndex="0" onTouchMove={this.Touch} onKeyDown={this.Key} id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Benoit-Henri</h1><h1 id="foreground3">...and i provide Solutions</h1>
+
+  <button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim3(); let ParisForeground = document.getElementById('ParisForeground'); ParisForeground.focus()}} style={buttonDownFrameStyle}>Down</button>
+
+  </div>
 </div>
-<div onWheel={this.Scroll} id="buttonDownDiv"><button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim3()}} style={buttonDownFrameStyle}>Down</button></div>
+{/*<div onWheel={this.Scroll} id="buttonDownDiv"><button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim3()}} style={buttonDownFrameStyle}>Down</button></div>*/}
 <div ref={(div) => {this.Plain = div}} onWheel={this.Scroll} className="Plain" id="plain">
 
-<div id="Background" style={{ height: "90vh", width: "100vw", background: "url('rhapsody.jpg')", backgroundRepeat: "no-repeat ", backgroundSize: "100% 100%"}}></div>
+<div id="Background" style={{ height: "90vh", width: "100vw", background: "url('rhapsodyResized.png')", backgroundRepeat: "no-repeat ", backgroundSize: "100% 100%"}}></div>
 {/*<div id="BackgroundAnims"  style={{ height: "90vh", width: "50vw"}}><img id="Dove" style={{height: "5vh", width: "5vw"}} alt="Dove" src="Dove.gif"/></div>
 <div id ="ParisSublayers4" style={{width: "50vw", height: "90vh"}} data-depth="0.2">
 
@@ -451,7 +794,7 @@ let buttonUpFrameStyle = {
 <div id="ParisSublayers" style={{width: "50vw", height: "90vh"}} data-depth="0.7"><img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 </div>*/}
-<div onTouchMove={this.Touch} ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim2()}} style={buttonDownFrameStyle}>arrow Down</button></div>
+<div tabIndex="0" onTouchMove={this.Touch} ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); let Foreground = document.getElementById('foreground'); Foreground.focus()}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim2(); let contentForeground = document.getElementById('contentForeground'); contentForeground.focus()}} style={buttonDownFrameStyle}>arrow Down</button></div>
 
 </div>
 <section id="content">
@@ -466,7 +809,7 @@ let buttonUpFrameStyle = {
 <div className="contentDiv" data-depth="0.8"><div className="quotes" id="quote5">I always believe in making my code better.</div></div>
 
 
-<div  id="contentForeground" data-depth="0.9" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll}><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={async (e) => {e.preventDefault(); await scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim()}} style={buttonDownFrameStyle}>down button</button></div>
+<div tabIndex="0" id="contentForeground" data-depth="0.9" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll}><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); let ParisForeground = document.getElementById('ParisForeground'); ParisForeground.focus()}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={async (e) => {e.preventDefault(); await scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim(); let Foreground2 = document.getElementById('Foreground2'); Foreground2.focus()}} style={buttonDownFrameStyle}>down button</button></div>
 
 
 </section>
@@ -486,8 +829,8 @@ let buttonUpFrameStyle = {
   
 
   </div>
-  <div onTouchMove={this.Touch} onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">Some of the technologies I use everyday</h1><h1 id="foreground6"></h1>
-  <button id="TechListUpButton" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'})}} style={buttonUpFrameStyle}>Top</button></div>
+  <div tabIndex="0" onTouchMove={this.Touch} onWheel={this.Scroll} ref={(div) => {this.Foreground2 = div}} id="Foreground2" data-depth="0.9"><h1 id="foreground4">And here are</h1><h1 id="foreground5">Some of the technologies I use everyday</h1><h1 id="foreground6"></h1>
+  <button id="TechListUpButton" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); let Foreground = document.getElementById('foreground'); Foreground.focus()}} style={buttonUpFrameStyle}>Top</button></div>
 </div>
 
 

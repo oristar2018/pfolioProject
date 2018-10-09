@@ -1,7 +1,7 @@
 body{
   overflow-x: hidden;
   overflow-y: scroll;
-  background: /*#984B43 #233237;*/ #18121E;
+  background: /*#984B43 #233237;*/ #38343C;
 
 }
 
@@ -199,13 +199,13 @@ form {
 
 #layer1 {
 
-  height: 60vh;
+  height: 90vh;
   width: 100vw;
 }
 
 #foreground {
   width: 100vw;
-  height: 60vh;
+  height: 90vh;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -295,7 +295,7 @@ form {
   position: relative;
   -webkit-animation: 1s linear 1s 1 forwards opaqueBis;
   animation: 1s linear 1s 1 forwards opaqueBis;
-  font-size: 3rem !important
+  font-size: 4rem;
 }
 
 @-webkit-keyframes opaqueBis {
@@ -406,15 +406,15 @@ form {
 }
 
 #scene {
-  top: 25vh;
-  height: 60vh;
+  top: 10vh;
+  height: 90vh;
   width: 100vw;
-   margin-bottom: 20vh;
+  margin-bottom: 10vh;
 }
 
 #plain {
   height: 90vh;
-  margin-top: 60vh;
+  /*margin-top: 60vh;*/
   
   /*transform: scale(1.125) !important;*/
 
@@ -1060,11 +1060,11 @@ left: 65vw;
 
 @keyframes OriginDown {
   0% {
-      bottom: -2000px;
+      top: 6000px;
   }
 
   100% {
-    bottom: 0;
+    top: 8vh;
     /*opacity: 1;*/
   }
 }
@@ -2445,4 +2445,103 @@ left: 50vw;
 }
 
 
+@media (min-width: 2000px) {
 
+  #OriginText {
+    left: 6vw;
+  }
+
+  #OriginText2 {
+
+    width: 20vw;
+  }
+}
+
+
+/*#NavLinkDeploy {
+  display: none;
+  opacity: 0;
+
+}
+
+#NavLinkClick {
+  display: block;
+  opacity: 1;
+  color: white;
+}
+
+
+#NavLinkClick:hover {
+  
+  transition: all 400ms linear;
+  opacity: 0;
+  display: none;
+
+ 
+}
+
+#NavLinkClick:hover + #NavLinkDeploy {
+  transition: all 400ms linear;
+  opacity: 1;
+  display: block
+}*/
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1000px) and (orientation: portrait) {
+
+#About {
+  position: relative;
+  top: 15vh;
+}
+
+#Links {
+
+  position: relative;
+  top: 2vh;
+}
+
+
+}
+
+
+
+/*#Background {
+
+  background: url('/rhapsodyResized.png') ;
+  height: 90vh; 
+  width: 100vw;
+  background-repeat: no-repeat ;
+  background-size: 100% 100% ;
+}
+
+
+
+@media only screen and (max-device-width: 1500px) {
+
+
+  #Background {
+
+  background: url('/rhapsody.jpg');
+  height: 90vh; 
+  width: 100vw;
+  background-repeat: no-repeat ;
+  background-size: 100% 100% ;
+}
+}
+
+@media and (max-device-width: 1500px) {
+
+
+  #Background {
+
+  background: url('/rhapsody.jpg');
+   height: 90vh; 
+  width: 100vw;
+  background-repeat: no-repeat ;
+  background-size: 100% 100% ;
+}
+}*/
+
+/*div, section {
+  outline: none
+}*/
