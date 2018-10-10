@@ -17,7 +17,7 @@ class App extends Component {
         <Route
           render={({ location }) => (
             <div id="MasterContainer">
-            <nav id="mainNavBar">
+            <nav id="mainNavBar" tabIndex="-1" ref={(nav) => ( this.Nav = nav)} onWheel={(e) => e.preventDefault()}>
             <div id="TitleDiv">
              <h1 id="title">B.H.D Developper</h1>
              </div>

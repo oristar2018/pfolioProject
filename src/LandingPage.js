@@ -772,9 +772,9 @@ let buttonUpFrameStyle = {
 {/*<div onWheel={this.Scroll} id="buttonDownDiv"><button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 500, ease:'inExpo'}); TechAnim3()}} style={buttonDownFrameStyle}>Down</button></div>*/}
 <div ref={(div) => {this.Plain = div}} onWheel={this.Scroll} className="Plain" id="plain">
 
-<div id="Background" style={{ height: "90vh", width: "100vw", background: "url('rhapsodyResized.png')", backgroundRepeat: "no-repeat ", backgroundSize: "100% 100%"}}></div>
-{/*<div id="BackgroundAnims"  style={{ height: "90vh", width: "50vw"}}><img id="Dove" style={{height: "5vh", width: "5vw"}} alt="Dove" src="Dove.gif"/></div>
-<div id ="ParisSublayers4" style={{width: "50vw", height: "90vh"}} data-depth="0.2">
+<div id="Background" style={{ height: "100vh", width: "100vw", background: "url('rhapsodyResized.png')", backgroundRepeat: "no-repeat ", backgroundSize: "100% 100%"}}></div>
+{/*<div id="BackgroundAnims"  style={{ height: "100vh", width: "50vw"}}><img id="Dove" style={{height: "5vh", width: "5vw"}} alt="Dove" src="Dove.gif"/></div>
+<div id ="ParisSublayers4" style={{width: "50vw", height: "100vh"}} data-depth="0.2">
 
 <img style={{width: "50w", height: "40vh", position: "relative", top: "55vh"}} src="forest.png" alt="Tree"/>
 
@@ -785,13 +785,13 @@ let buttonUpFrameStyle = {
 <div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp"><p id="OriginText">I live and work in Paris.</p></div><div id="OriginRightDown"><p id="OriginText2">I also enjoy working abroad. <br/> Switzerland, England, Luxembourg...</p></div></div></div>
 {/*<div id="ParisSublayers2" data-depth="0.5"><img style={{width: "8.5vw", height: "15vh", position: "relative", top: "69vh"}} src="oak.png" alt="Tree" /><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-5vw"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-4vw"}} src="oak.png" alt="Tree"/></div>
-<div id="Man" style={{width: "50vw", height: "90vh"}} data-depth="0.6"><img alt="walking man" style={{height: "10vh", width: "6.5vw", position: "relative", top: "70vh", left: "21.5vw"}} id="ManGif" src="WalkBack.gif"/></div>
-<div id ="ParisSublayers3" style={{width: "50vw", height: "90vh"}} data-depth="0.25">
+<div id="Man" style={{width: "50vw", height: "100vh"}} data-depth="0.6"><img alt="walking man" style={{height: "10vh", width: "6.5vw", position: "relative", top: "70vh", left: "21.5vw"}} id="ManGif" src="WalkBack.gif"/></div>
+<div id ="ParisSublayers3" style={{width: "50vw", height: "100vh"}} data-depth="0.25">
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh", left: "3vw"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh", left: "-4vw"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh", left: "-2vw"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh", left: "-4vw"}} src="oak.png" alt="Tree"/></div>
-<div id="ParisSublayers" style={{width: "50vw", height: "90vh"}} data-depth="0.7"><img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
+<div id="ParisSublayers" style={{width: "50vw", height: "100vh"}} data-depth="0.7"><img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "12.5vw", height: "20vh",  position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/>
 </div>*/}
 <div tabIndex="0" onTouchMove={this.Touch} ref={(div) => {this.PlainForeground = div}} onWheel={this.Scroll} id="ParisForeground" data-depth="0.8"><button className="animButton" id="ParisButton1" onClick={() => {scrollToComponent(this.Foreground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); let Foreground = document.getElementById('foreground'); Foreground.focus()}} style={buttonUpFrameStyle}>arrow Up</button><button className="animButton" id="ParisButton2" onClick={() => {scrollToComponent(this.ContentForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim2(); let contentForeground = document.getElementById('contentForeground'); contentForeground.focus()}} style={buttonDownFrameStyle}>arrow Down</button></div>
@@ -817,8 +817,8 @@ let buttonUpFrameStyle = {
 <div id="scene2"  ref={(div) => {this.ButtonWorks = div}} style={{background: "white"}} >
   <div data-depth="0.1" id="layer2" style={{background: "#18121E"}}></div>
   <div data-depth="0.4" id="scene2Layer2">
-  <img src="mongodb2.png" style={{height: "30vh"}}className="techImages" id="mongodbLogo" alt="tech logo" />
-  <img src="reactL.png" className="techImages" style={{filter: "invert(100%)"}}id="reactLogo" alt="tech logo"/>
+  <img src="reactL.png" style={{height: "30vh"}} className="techImages" style={{filter: "invert(100%)"}} id="mongodbLogo" alt="tech logo" />
+  <img src="mongodb2.png" className="techImages" id="reactLogo" alt="tech logo"/>
   <img src="RRouter.jpg" className="techImages" id="routerLogo" alt="tech logo"/>
   <img src="ReduxLogo.png" className="techImages" id="reduxLogo" alt="tech logo"/>
   <img src="webpack.png" className="techImages" id="webpackLogo" alt="tech logo"/>
