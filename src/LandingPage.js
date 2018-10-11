@@ -395,6 +395,30 @@ class LandingPage extends Component {
       
 
     });
+     if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+
+     // Do Firefox-related activities
+     let troubleSome1 = document.getElementById('troubleSome1');
+     let troubleSome2 = document.getElementById('troubleSome2');
+     let Solution1 = document.getElementById('Solution1');
+     let Solution2 = document.getElementById('Solution2');
+     troubleSome1.style.display = "none";
+     troubleSome2.style.display = "none";
+     let newDiv = document.createElement('div');
+     
+     newDiv.setAttribute('id', 'quote3');
+     newDiv.setAttribute('class', 'quotes');
+     newDiv.style.animation = "1s ease-out 3s 1 forwards quote3Anim";
+     newDiv.textContent = "I value efficiency";
+     Solution1.appendChild(newDiv);
+     let newDiv2 = document.createElement('div');
+     newDiv2.setAttribute('id', 'quote2');
+     newDiv2.setAttribute('class', 'quotes');
+     newDiv2.style.animation = "1s ease-out 2s 1 forwards quote2Anim";
+     newDiv2.textContent = "I enjoy cracking problems";
+     Solution2.appendChild(newDiv2)
+     
+}
 
      ParisForeground.addEventListener('mousewheel', (e) => {
       if (e.deltaY > 0) {
@@ -448,22 +472,21 @@ class LandingPage extends Component {
     var OriginRightDown = document.getElementById('OriginRightDown');
 
     ParisForeground.addEventListener('mouseover', (e) => {
-      OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
-      OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+      OriginRightUp.style.animation = "0.5s linear 1 forwards OriginUp";
+      OriginRightDown.style.animation = "0.5s linear 1 forwards OriginDown";
 
     } )
 
     Foreground.addEventListener('mousewheel', (e) => {
       if (e.deltaY > 0) {
      // console.log('goes here foreground');
-      OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
-      OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+      OriginRightUp.style.animation = "0.5s linear 1 forwards OriginUp";
+      OriginRightDown.style.animation = "0.5s linear 1 forwards OriginDown";
 
    }});
 
 
 
- 
 
     };  
 
@@ -802,11 +825,36 @@ let buttonUpFrameStyle = {
 <p>I enjoy cracking problems, thinking about the best possible design patterns and maximizing efficiency.</p>
 <p>To me, coding is no only a means of implementing an algorithm or solution to a problem but also an artform. Like litteral language translation, the wording and the turn of phrase you employ will greatly affect your reader/interlocutor. </p>
 <p>I always believe in making my code better.</p>*/}
-<div className="contentDiv" data-depth="0.2"><div className="quotes" id="quote1">I am full-stack developper.</div></div>
+{/*<div className="contentDiv" data-depth="0.2"><div className="quotes" id="quote1">I am full-stack developper.</div></div>
 <div className="contentDiv" data-depth="0.4"><div className="quotes" id="quote2">I enjoy cracking problems</div></div>
 <div className="contentDiv" data-depth="0.6"><div className="quotes" id="quote3">I value efficiency.</div></div>
 <div className="contentDiv" data-depth="0.7"><div className="quotes" id="quote4">Coding is an artform </div> </div>
-<div className="contentDiv" data-depth="0.8"><div className="quotes" id="quote5">I always believe in making my code better.</div></div>
+<div className="contentDiv" data-depth="0.8"><div className="quotes" id="quote5">I always believe in making my code better.</div></div>*/}
+   <div id="Solution2" className="contentDiv" data-depth="0.2">
+            <div className="quotes" id="quote1">
+              I am full-stack developper.
+            </div>
+          </div>
+          <div id="troubleSome1" className="contentDiv" data-depth="0.4">
+            <div className="quotes" id="quote2">
+              I enjoy cracking problems
+            </div>
+          </div>
+          <div id="troubleSome2" className="contentDiv" data-depth="0.6">
+            <div className="quotes" id="quote3">
+              I value efficiency
+            </div>
+          </div>
+          <div id="Solution1" className="contentDiv" data-depth="0.7">
+            <div className="quotes" id="quote4">
+              Coding is an artform
+            </div>
+          </div>
+          <div className="contentDiv" data-depth="0.8">
+            <div className="quotes" id="quote5">
+              I always believe in making my code better.
+            </div>
+          </div>
 
 
 <div tabIndex="0" id="contentForeground" data-depth="0.9" ref={(div) => {this.ContentForeground = div}} onWheel={this.Scroll}><button className="animButton" id="contentButton1"  onClick={() => {scrollToComponent(this.PlainForeground, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); let ParisForeground = document.getElementById('ParisForeground'); ParisForeground.focus()}} style={buttonUpFrameStyle}>up button</button><button className="animButton" id="contentButton2" onClick={async (e) => {e.preventDefault(); await scrollToComponent(this.ButtonWorks, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim(); let Foreground2 = document.getElementById('Foreground2'); Foreground2.focus()}} style={buttonDownFrameStyle}>down button</button></div>
@@ -817,7 +865,13 @@ let buttonUpFrameStyle = {
 <div id="scene2"  ref={(div) => {this.ButtonWorks = div}} style={{background: "white"}} >
   <div data-depth="0.1" id="layer2" style={{background: "#18121E"}}></div>
   <div data-depth="0.4" id="scene2Layer2">
-  <img src="reactL.png" style={{height: "30vh"}} className="techImages" style={{filter: "invert(100%)"}} id="mongodbLogo" alt="tech logo" />
+  <img src={
+
+      (document.documentMode || /Edge/.test(navigator.userAgent)) ?  "ReactSticker.png" : "reactL.png"
+
+
+
+  } style={{height: "30vh"}} className="techImages" style={{filter: "invert(100%)"}} id="mongodbLogo" alt="tech logo" />
   <img src="mongodb2.png" className="techImages" id="reactLogo" alt="tech logo"/>
   <img src="RRouter.jpg" className="techImages" id="routerLogo" alt="tech logo"/>
   <img src="ReduxLogo.png" className="techImages" id="reduxLogo" alt="tech logo"/>

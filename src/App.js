@@ -11,6 +11,33 @@ import logo from "./logo.svg";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props),
+    this.onClick = this.onClick.bind(this)
+  }
+
+  onClick(e) {
+    var navColor = document.getElementById('mainNavBar');
+
+    switch(e.target.id) {
+      case "blogLink":
+
+      navColor.style.background = "black";
+      break;
+
+      case "NavLink1":
+      case "NavLink2": 
+      case "NavLink4": 
+      navColor.style.background = "transparent";
+      break;
+
+
+
+      default: 
+      return null
+    }
+    
+  }
   render() {
     return (
       <Router>
@@ -22,14 +49,14 @@ class App extends Component {
              <h1 id="title">B.H.D Developper</h1>
              </div>
              <div id="NavLinkDiv">
-              <NavLink className="NavLink" exact strict to="/" activeStyle={{ color: "#EAC67A" }}>
+              <NavLink className="NavLink" id="NavLink1" exact strict to="/" activeStyle={{ color: "#EAC67A" }} onClick={this.onClick}>
                 Home
               </NavLink>
-               <NavLink className="NavLink" exact strict to="/Projects" activeStyle={{ color: "#EAC67A" }}>
+               <NavLink className="NavLink" id="NavLink2" exact strict to="/Projects" activeStyle={{ color: "#EAC67A" }} onClick={this.onClick}>
                 Work
               </NavLink>
-              <NavLink className="NavLink" exact strict to="/blog" activeStyle={{ color: "#EAC67A" }}>Blog</NavLink>
-              <NavLink className="NavLink" exact strict to="/Contacts" activeStyle={{ color: "#EAC67A" }}>Contact</NavLink>
+              <NavLink className="NavLink" id="blogLink" exact strict to="/blog" activeStyle={{ color: "#EAC67A" }} onClick={this.onClick}>Blog</NavLink>
+              <NavLink className="NavLink" id="NavLink4" exact strict to="/Contacts" activeStyle={{ color: "#EAC67A" }} onClick={this.onClick}>Contact</NavLink>
            </div>
             </nav>
             <TransitionGroup>

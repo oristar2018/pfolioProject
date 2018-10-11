@@ -8,7 +8,7 @@ render() {
 return (
 	<div id="formContainer">
 	    <div id="about">
-	    <div id="About">
+	    {/*<div id="About">*/}
 	    	<h1 id="AboutH1">About</h1>
 	    	<div id="AboutFlavourText">I am a self taught full-stack developper. I began my journey with Python in 2015 and then fell in love with javascript. 
 	    	I started practicing with the Viking code school and the Odin project and switched to freecodecamp where i completed the main certifications.
@@ -16,7 +16,7 @@ return (
 	    	Since then, i've been learning all that i can get my hands on: from server conception and database management to modern front-end frameworks and algorithm solving. 
             <br/><br/>
             Before all that, I was an Opera Singer(Tenor) for 10 years. I toured in Europe and all over France.  
-	    	</div>
+	    	{/*</div>*/}
 	    </div>
 	    <div id="Links">
 	    <a href="https://github.com/oristar2018"><img className="LinksImage" src="cat.png" alt="Link"/></a>

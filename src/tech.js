@@ -51,11 +51,11 @@ nodeLogo.style.animation = "1.5s linear 1.75s 1 forwards appear4";
       var quote4 = document.getElementById('quote4');
       var quote5 = document.getElementById('quote5');
 
-        quote1.style.animation = "1s ease-out 1s forwards quote1Anim";
-        quote2.style.animation = "1s ease-out 2s 1 forwards quote2Anim";
-        quote3.style.animation = "1s ease-out 3s 1 forwards quote3Anim";
-        quote4.style.animation = "1s ease-out 4s 1 forwards quote4Anim";
-        quote5.style.animation = "1s ease-out 5s 1 forwards quote5Anim";    
+        quote1.style.animation = "1s ease-out 1 forwards quote1Anim";
+        quote2.style.animation = "1s ease-out 1s 1 forwards quote2Anim";
+        quote3.style.animation = "1s ease-out 2s 1 forwards quote3Anim";
+        quote4.style.animation = "1s ease-out 3s 1 forwards quote4Anim";
+        quote5.style.animation = "1s ease-out 4s 1 forwards quote5Anim";    
 
 		},
 
@@ -64,8 +64,8 @@ nodeLogo.style.animation = "1.5s linear 1.75s 1 forwards appear4";
 
 	var OriginRightUp = document.getElementById('OriginRightUp');
    var OriginRightDown = document.getElementById('OriginRightDown');
-   OriginRightUp.style.animation = "1s linear 1 forwards OriginUp";
-   OriginRightDown.style.animation = "1s linear 1 forwards OriginDown";
+   OriginRightUp.style.animation = "0.5s linear 1 forwards OriginUp";
+   OriginRightDown.style.animation = "0.5s linear 1 forwards OriginDown";
 
 		}
 
