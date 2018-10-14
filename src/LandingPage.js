@@ -21,6 +21,10 @@ class LandingPage extends Component {
 
 
     componentDidMount() {
+
+      this.refs.vidRef.play();
+      this.refs.vidRef2.play();
+
     	var scene = document.getElementById('scene');
     	var scene2 = document.getElementById('scene2');
       var sceneParis = document.getElementById('plain');
@@ -784,7 +788,19 @@ let buttonUpFrameStyle = {
     	<div id="LandingContainer" onTouchMove={this.Touch} onWheel={this.Scroll}>
     	<div id="scene" style={{background: /*"#18121E"*/ "url('banner.jpg')", width: "100vw", overflowX: "hidden"}}>
   
-  <div data-depth="0.2" id="layer1" style={{background:  /*"#18121E"*/ "url('banner.jpg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", width: "100vw", overflowX: "hidden"}}></div>
+  <div data-depth="0.2" id="layer1" style={{background:  /*"#18121E"*/ "url('blue.jpeg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", width: "100vw", overflowX: "hidden"}}>
+
+  <video className="videosize" style={{height: "100vh", width: "100vw", display: "flex", flexDirection: "row"}} ref="vidRef" autoplay loop id="video-background" muted plays-inline>
+  <source src="blue.mp4" type="video/mp4" />
+</video>
+
+
+
+  </div>
+   <div data-depth="0.3" id="Cover" style={{height: "100vh", width: "100vw"}}>
+   <div style={{height: "20vh", width: "40vw", background: "transparent", filter: "blur(1px)"}}></div>
+
+   </div>
   <div data-depth="0.6" id="navTextContainer"><p id="navText">Use mousewheel or click/tap buttons to navigate</p></div>
   <div  tabIndex="0" onTouchMove={this.Touch} onKeyDown={this.Key} id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Benoit-Henri</h1><h1 id="foreground3">...and i provide Solutions</h1>
 
@@ -863,7 +879,12 @@ let buttonUpFrameStyle = {
 </section>
 
 <div id="scene2"  ref={(div) => {this.ButtonWorks = div}} style={{background: "white"}} >
-  <div data-depth="0.1" id="layer2" style={{background: "#18121E"}}></div>
+  <div data-depth="0.1" id="layer2" style={{background: /*"#18121E"*/ "url('blue.jpeg')", backgroundSize: "100% 100%", backgroundRepeat: "no-repeat"}}>
+  <video className="videosize" style={{height: "100vh", width: "100vw", display: "flex", flexDirection: "row"}} ref="vidRef2" autoplay loop id="video-background" muted plays-inline>
+  <source src="graph.mp4" type="video/mp4" />
+</video>
+</div>
+
   <div data-depth="0.4" id="scene2Layer2">
   <img src={
 

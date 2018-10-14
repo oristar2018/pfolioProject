@@ -20,7 +20,7 @@ class Blog extends Component {
 			<div id="blogContainer">
 			<div id="blogElement1">
 			
-				<h1 className="blogH1">Why binary search algorithm changes your perspective on array management</h1>
+				<h1 className="blogH1">A couple of useful tricks</h1>
 				<p className="articleText">Hey guys!
 
 So here's a nifty little trick that is not explained everywhere.
@@ -38,15 +38,15 @@ If your element has a set height that is not in relative units (vh/vw), you can 
 But let's imagin that your element's height is set on auto or written in relative viewport units (vh).
 
 You can make the scrollbar start at the bottom just by using :
-				<br/><code>element.scrollTop = element.scrollHeight;
-</code><br/>
+				<br/><br/><code>element.scrollTop = element.scrollHeight;
+</code><br/><br/>
 
 
 element.scrollHeight gives you the absolute height of your element including overflow (hidden or not);
 
 if you want to use only the portion of the component that is in view use : 
-<br/><code>element.scrollTop = element.clientHeight 
-</code><br/>
+<br/><br/><code>element.scrollTop = element.clientHeight 
+</code><br/><br/>
 
 clientHeight includes the element's css height + padding;
 
@@ -73,9 +73,9 @@ In that case, you need to use the "blur" event and listen for it on the element.
 
 Your would write something in the lines of :
 
-<br/><code>
-element.addEventListener('blur', function(e) {"this.focus()" });
-</code><br/>
+<br/><br/><code>
+element.addEventListener('blur', function(e) &#123; "this.focus()" &#125;);
+</code><br/><br/>
 
 this way the element will never lose focus as the focusOut event will occur but the blur event will refocus the element immediately.
 

@@ -21,12 +21,12 @@ class App extends Component {
 
     switch(e.target.id) {
       case "blogLink":
+      case "NavLink2": 
 
       navColor.style.background = "black";
       break;
 
       case "NavLink1":
-      case "NavLink2": 
       case "NavLink4": 
       navColor.style.background = "transparent";
       break;
@@ -46,7 +46,8 @@ class App extends Component {
             <div id="MasterContainer">
             <nav id="mainNavBar" tabIndex="-1" ref={(nav) => ( this.Nav = nav)} onWheel={(e) => e.preventDefault()}>
             <div id="TitleDiv">
-             <h1 id="title">B.H.D Developper</h1>
+             {/*<h1 id="title">B.H.D Developper</h1>*/}
+             <img src="logo3.png" id="title" style={{position: "relative", height: "9vh"}}alt="logo"></img>
              </div>
              <div id="NavLinkDiv">
               <NavLink className="NavLink" id="NavLink1" exact strict to="/" activeStyle={{ color: "#EAC67A" }} onClick={this.onClick}>
