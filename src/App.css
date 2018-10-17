@@ -3151,7 +3151,7 @@ section {
 .articleText {
   line-height: 1.6;
   text-align: justify;
-  text-indent: 1em;
+  /*text-indent: 1em;*/
   text-rendering: optimizeLegibility;
 
 }

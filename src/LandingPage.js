@@ -801,7 +801,7 @@ let buttonUpFrameStyle = {
    <div style={{height: "20vh", width: "40vw", background: "transparent", filter: "blur(1px)"}}></div>
 
    </div>
-  <div data-depth="0.6" id="navTextContainer"><p id="navText">Use mousewheel or click/tap buttons to navigate</p></div>
+  <div data-depth="0.6" id="navTextContainer"><p id="navText">Use mousewheel/click-tap buttons or use arrow keys to navigate</p></div>
   <div  tabIndex="0" onTouchMove={this.Touch} onKeyDown={this.Key} id="foreground" onWheel={this.Scroll} ref={(div) => {this.Foreground = div}} data-depth="0.9"><h1 id="foreground1">Hello</h1><h1 id="foreground2">I'm Benoit-Henri</h1><h1 id="foreground3">...and i provide Solutions</h1>
 
   <button className="animButton" onClick={() => {scrollToComponent(this.Plain, { offset: 0, align: 'bottom', duration: 150, ease:'inExpo'}); Tech.TechAnim3(); let ParisForeground = document.getElementById('ParisForeground'); ParisForeground.focus()}} style={buttonDownFrameStyle}>Down</button>
@@ -821,7 +821,7 @@ let buttonUpFrameStyle = {
 </div>
 <div id="ParisBackground" data-depth="0.3"><img id="Eiffel" style={TowerStyle} src="EiffelTower.png" alt="Eiffel tower"/>
 </div>*/}
-<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp"><p id="OriginText">I live and work in Paris.</p></div><div id="OriginRightDown"><p id="OriginText2">I also enjoy working abroad. <br/> Switzerland, England, Luxembourg...</p></div></div></div>
+<div id="OriginContainer" data-depth="0.4"><div id="OriginLeft"></div><div id="OriginRight"><div id="OriginRightUp"><p id="OriginText">I currently live in Paris</p></div><div id="OriginRightDown"><p id="OriginText2">I'm a full stack developper <br/> and i enjoy cracking problems!</p></div></div></div>
 {/*<div id="ParisSublayers2" data-depth="0.5"><img style={{width: "8.5vw", height: "15vh", position: "relative", top: "69vh"}} src="oak.png" alt="Tree" /><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh"}} src="oak.png" alt="Tree"/>
 <img style={{width: "12.5vw", height: "20vh", position: "relative", top: "70vh"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-5vw"}} src="oak.png" alt="Tree"/><img style={{width: "8.5vw", height: "15vh",  position: "relative", top: "69vh", left: "-4vw"}} src="oak.png" alt="Tree"/></div>
 <div id="Man" style={{width: "50vw", height: "100vh"}} data-depth="0.6"><img alt="walking man" style={{height: "10vh", width: "6.5vw", position: "relative", top: "70vh", left: "21.5vw"}} id="ManGif" src="WalkBack.gif"/></div>

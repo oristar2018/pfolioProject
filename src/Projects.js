@@ -431,7 +431,7 @@ var scene6 = document.getElementById("scene6");
 					</div>
 					<div id="ProjectsLayer3" data-depth="0.6" />
 					<div tabIndex="0" onWheel={this.onScroll} id="ProjectsLayer4" data-depth="0.9" ref={(div) => { this.ForegroundScene3 = div; }}>
-						<a href="https://bhdhouseofteas.herokuapp.com"><h1 className="h1Projects" id="TeaTitle">MERN Ecommerce website</h1></a>		
+						<a href="https://bhdhouseofteas.herokuapp.com"><h1 className="h1Projects" style={{textAlign: "center"}} id="TeaTitle">MERN Ecommerce website <br/><span style={{fontSize: "1.25rem"}}>with payment/delivery API, password reset chain and custom detailed database</span></h1></a>		
 				        <button className="ProjectsButton" onScroll={this.onScroll} style={buttonDownStyle} onClick={() => {var scene4 = document.getElementById("scene4"); scrollToComponent(this.Scene4, { offset: 0, align: 'bottom', duration: 250, ease:'inExpo'}) ; this.ForegroundScene4.focus()/*scene4.style.animation = "0.7s ease-in 1 forwards appear"*/}}></button>
 					    {/*<div><img onClick={() => scrollToComponent(this.Scene4, { offset: 0, align: 'bottom', duration: 250, ease:'inExpo'})} className="ArrowClass" id="Arrow1" src="Arrow.gif" alt="arrow"/></div>*/}
 					</div>
@@ -440,7 +440,7 @@ var scene6 = document.getElementById("scene6");
 				<div id="plain3"></div>*/}
 				<div className="scenes" id="scene4" ref={(div) => { this.Scene4 = div; }}>
 				<div id="scene4Layer1" data-depth="0.2"><img id="scene4image1" src="dungeonOfArcana.png" alt="rogue game" style={{width: "100vw"}} /></div>
-				<div tabIndex="0" onWheel={this.onScroll} ref={(div) => { this.ForegroundScene4 = div; }} id="scene4Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Rogue-Like Game</h1></a>
+				<div tabIndex="0" onWheel={this.onScroll} ref={(div) => { this.ForegroundScene4 = div; }} id="scene4Layer2" data-depth="0.9"><a href="https://dungeonofarcana.herokuapp.com"><h1 className="h1Projects">Dungeon crawler Game</h1></a>
 				<button className="ProjectsButton" onScroll={this.onScroll} style={buttonUpStyle} onClick={() => {scrollToComponent(this.Scene3, { offset: 0, align: 'bottom', duration: 250, ease:'inExpo'}); this.ForegroundScene3.focus()}}></button>
 				<button className="ProjectsButton"  onScroll={this.onScroll} style={buttonDownStyle} onClick={() => {var Frame1 = document.getElementById('scene5image1');
 var Frame2 = document.getElementById('scene6image1'); scrollToComponent(this.Scene5, { offset: 0, align: 'bottom', duration: 250, ease:'inExpo'}); this.ForegroundScene5.focus()/*Frame1.style.animation = "0.7s ease-in 1 forwards appear1"*/}}></button>
