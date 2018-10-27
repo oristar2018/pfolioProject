@@ -791,7 +791,7 @@ let buttonUpFrameStyle = {
   <div data-depth="0.2" id="layer1" style={{background:  /*"#18121E"*/ "url('blue.jpeg')", backgroundRepeat: "no-repeat", backgroundSize: "100% 100%", width: "100vw", overflowX: "hidden"}}>
 
   <video className="videosize" style={{height: "100vh", width: "100vw", display: "flex", flexDirection: "row"}} ref="vidRef" autoplay loop id="video-background" muted plays-inline>
-  <source src="blue.mp4" type="video/mp4" />
+  <source src="lines.mp4" type="video/mp4" />
 </video>
 
 

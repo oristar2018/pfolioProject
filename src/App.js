@@ -16,6 +16,9 @@ class App extends Component {
     this.onClick = this.onClick.bind(this)
   }
 
+  componentDidMount() {
+     console.log(window.location.href)
+  }
   onClick(e) {
     var navColor = document.getElementById('mainNavBar');
 
